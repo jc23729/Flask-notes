@@ -13,3 +13,11 @@ Successfully installed flask Werkzeug Jinja2 ...
 Cleaning up...
 
 """
+##2 Next we want to start a file like app.py
+
+#3 Making An App
+# Need to create a “flask application”:
+
+from flask import Flask
+
+app = Flask(__name__)
