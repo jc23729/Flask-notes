@@ -21,3 +21,14 @@ Cleaning up...
 from flask import Flask
 
 app = Flask(__name__)
+
+#Step 4 run Flask
+# >use the flask run on command lines
+
+#       Running Flask App
+#       (venv) $ flask run
+#       (Control-C to quit)
+
+#       If your Flask app file isn’t called app:
+
+#       (venv) $ FLASK_APP=app.py flask run
