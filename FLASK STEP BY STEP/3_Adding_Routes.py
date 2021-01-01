@@ -17,3 +17,23 @@ def say_hello():##when that happens call this function
     html = "<html><body><h1>Hello</h1></body></html>"
     return html
 
+@app.route('/goodbye')
+def say_bye():
+    """Says good bye"""
+    return "GOOD BYE!!!"
+
+Serving at the Root ##(main or home page)
+@app.route('/')
+def index():
+    """Show homepage"""
+
+    return """
+      <html>
+        <body>
+          <h1>I am the landing page</h1>
+        </body>
+      </html>
+      """
+
+This function will get called if the user requests http://localhost:5000/.
+
