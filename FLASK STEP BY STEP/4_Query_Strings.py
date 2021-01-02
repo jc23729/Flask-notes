@@ -1,23 +1,24 @@
-GET and POST
-Requests
-Flask provides an object, request, to represent web requests
+# GET and POST
+# Requests
+# Flask provides an object, request, to represent web requests
 
 from flask import request
-Handling Query Arguments
-For a url like /search?term=fun
+
+# Handling Query Arguments
+# For a url like /search?term=fun
 
 @app.route("/search")
 def search():
     """Handle GET requests like /search?term=fun"""
 
     term = request.args["term"]
-    return f"<h1>Searching for {term}</h1>"
-request.args is a dict-like object of query parameters.
+    return f"<h1>Searching Results for {term}</h1>"
+# request.args is a dict-like object of query parameters. its empty
 
-Handling POST Requests
-By default, a route only responds to GET requests
+# Handling POST Requests
+# By default, a route only responds to GET requests
 
-To accept POST requests, must specify that:
+# To accept POST requests, must specify that:
 
 @app.route("/my/route", methods=["POST"])
 def handle_post_to_my_route():
