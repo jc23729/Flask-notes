@@ -26,15 +26,17 @@ def show_subreddit():
 def show_subreddit(subreddit):# you would have to pass subreddit variable name, or whatever you put in on top for it to work
   return "THIS IS A SUBREDDIT"
 
-## same pattern same idea
+## same pattern same idea using fake database/ dictionary
 POSTS = {
   1: "I like chicken tenders",
   2: "I hate mayo!",
   3: "Double rainbow all the way",
   4: "YOLO OMG (kill me)"
 }
-
-@app.route('/posts/<id>')
+# variable in the path is called <id>
+# we should have acess of <id> inside def find_post
+# and then we can use that 
+@app.route('/posts/<int:id>')# add int
 def find_post(id):
   post = POSTS[id]
   return f"<p>{post}</>"
