@@ -21,7 +21,20 @@ def show_subreddit():
   return "THIS IS A SUBREDDIT"
 
 ## THIS WOULD WORK, BECAUSE IT MATCHES THE PATTERN
+##whatever your  variable name is in that path you have to have matching parameter for flask view function
 @app.route('/r/subreddit')
 def show_subreddit(subreddit):# you would have to pass subreddit variable name, or whatever you put in on top for it to work
   return "THIS IS A SUBREDDIT"
 
+## same pattern same idea
+POSTS = {
+  1: "I like chicken tenders",
+  2: "I hate mayo!",
+  3: "Double rainbow all the way",
+  4: "YOLO OMG (kill me)"
+}
+
+@app.route('/posts/<id>')
+def find_post(id):
+  post = POSTS[id]
+  return f"<p>{post}</>"
